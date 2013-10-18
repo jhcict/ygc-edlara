@@ -1,47 +1,138 @@
 <!doctype html>
 <html>
 <head>
-<title>Edlara</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile-1.3.2.min.css"/>
-<link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile.structure-1.3.2.min.css"/>
-<link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile.theme-1.3.2.min.css"/>
-<script type="text/javascript" src="lib/jquery/jquery-1.9.0.min.js"></script>
-<script type="text/javascript" src="lib/jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
+	<title>Edlara</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile-1.3.2.min.css"/>
+	<link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile.structure-1.3.2.min.css"/>
+	<link rel="stylesheet" href="lib/system/css/style.css">
+	<link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile.theme-1.3.2.min.css"/>
+	<script type="text/javascript" src="lib/jquery/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
 </head>
 <body>
-<div data-role="page" id="foo">
 
-	<div data-role="header">
-		<h1>Foo</h1>
-	</div><!-- /header -->
+	<div data-role="page" id="index">
 
-	<div data-role="content">
-		<p><a data-transition="slide" href="#page2">Demo Page</a></p>
-	</div><!-- /content -->
+		<div data-role="header">
+			<h1>EdLara</h1>
+		</div><!-- /header -->
 
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-<!-- Start of second page -->
-<div data-role="page" id="page2">
-
-	<div data-role="header">
-		<h1>Bar</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">
-		<p><a href="#foo" data-transition="flip">Back to Home</a></p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="e" data-count-theme="b">
+				<li>
+					<a id="tutorial_a" href="#tutorials" data-theme="e" data-transition="flow"> Tutorials 
+						<span id="tutorialcount" class="ui-li-count">12</span>
+					</a>
+				</li>
+				<li>
+					<a id="exam_a" href="#exams">Exams 
+						<span id="examcount" class="ui-li-count" data-transition="flow">0</span>
+					</a>
+				</li>
+				<li>
+					<a id="login_a" href="#login">Login <span id="logincount" class="ui-li-count" data-transition="flip">328</span>
+					</a>
+				</li>
+			</ul>
+		</div><!-- /content -->
+		<!-- <a id="test">Test</a>
+		<div id="ew">
 
 
+		</div> -->
+	</div>
+
+	<!-- Start of second page -->
+	<div data-role="page" id="tutorials">
+
+		<div data-role="header">
+			<h1>Tutorials</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="b" data-divider-theme="e" data-count-theme="b">
+				<li>
+					<a id="tutorial_1" href="#tutorial1" >Tutorial 1 
+					</a>
+				</li>
+				<li>
+					<a id="#tutorial_2" href="#tutorial2">Tutorial 2 
+					</a>
+				</li>
+				<li>
+					<a id="#tutorial_3" href="#tutorial3">Tutorial 3				
+					</a>
+				</li>
+				<li>
+					<a id="#tutorial_4" href="#tutorial4">Tutorial 4			
+					</a>
+				</li>
+			</ul>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	<div data-role="page" id="exams">
+
+		<div data-role="header">
+			<h1>exams</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="b" data-divider-theme="e" >
+				<li>
+					<a id="exam_1" href="#exam1" >Exam 1 
+					</a>
+				</li>
+				<li>
+					<a id="#exam_2" href="#exam2">Exam 2 
+					</a>
+				</li>
+				<li>
+					<a id="#exam_3" href="#exam3">Exam 3				
+					</a>
+				</li>
+				<li>
+					<a id="#exam_4" href="#exam4">Exam 4			
+					</a>
+				</li>
+			</ul>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+	<div data-role="page" id="exams">
+		<div data-role="header">
+			<h1>Exams</h1>
+		</div><!-- /header -->
+	</div>
+
+	<div data-role="page" id="login">
+		<div data-role="header">
+			<h1>Login</h1>
+		</div><!-- /header -->
+		<form id="loginform">
+			<div class="textinput" data-role="fieldcontain">
+				<label for="username">Username</label>
+				<input type="text" data-clear-btn="true" name="text-3" data-mini="true"  id="username" value="">
+			</div>
+			<div class="textinput" data-role="fieldcontain">
+				<label for="password">Password</label>
+				<input type="password" data-clear-btn="true" name="password" data-mini="true" id="password" value="" autocomplete="off">
+			</div>
+			<a href="#index" data-role="button" data-theme="d" data-inline="true" data-mini="true" data-icon="back" data-transition="flow">Back</a>
+			<input type="submit" data-role="button" data-theme="b" data-inline="true" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-transition="flow" value="Login">
+		</form>
+
+	</div>
+
+	<script type="text/javascript"  src="lib/system/js/script.js"></script>
 
 </body>
 </html>
