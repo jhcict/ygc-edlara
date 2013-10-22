@@ -5,3 +5,12 @@
 .textinput {
 	margin:10px;
 }
+.checkboxdata{
+	position: relative;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float:right;
+}

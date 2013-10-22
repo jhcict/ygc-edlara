@@ -19,7 +19,7 @@
 		</div><!-- /header -->
 
 		<div data-role="content">
-			<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="e" data-count-theme="b">
+			<ul id="mainpagelist" data-role="listview" data-inset="true" data-theme="d" data-divider-theme="e" data-count-theme="b">
 				<li>
 					<a id="tutorial_a" href="#tutorials" data-theme="e" data-transition="flow"> Tutorials 
 						<span id="tutorialcount" class="ui-li-count">12</span>
@@ -30,8 +30,8 @@
 						<span id="examcount" class="ui-li-count" data-transition="flow">0</span>
 					</a>
 				</li>
-				<li>
-					<a id="login_a" href="#login">Login <span id="logincount" class="ui-li-count" data-transition="flip">328</span>
+				<li id="loginbtn">
+					<a id="login_a" href="#login">Login
 					</a>
 				</li>
 			</ul>
@@ -57,31 +57,26 @@
 	<div data-role="page" id="exams">
 
 		<div data-role="header">
-			<h1>exams</h1>
+			<h1>Exams</h1>
 		</div><!-- /header -->
 
 		<div data-role="content">
-			<ul id="exam_list" data-role="listview" data-inset="true" data-theme="h" data-divider-theme="e" >
+			<ul id="exam_list" data-role="listview" data-inset="true" data-theme="b" data-divider-theme="e" data-count-theme="b">
 			</ul>
+			<a href="#index" data-role="button" data-theme="d" data-inline="true" data-mini="true" data-icon="back" data-transition="flow">Back</a>
 		</div><!-- /content -->
-		<a href="#index" data-role="button" data-theme="d" data-inline="true" data-mini="true" data-icon="back" data-transition="flow">Back</a>
 		
 	</div><!-- /page -->
 
-	<div data-role="page" id="exams">
-		<div data-role="header">
-			<h1>Exams</h1>
-		</div><!-- /header -->
-	</div>
 
 	<div data-role="page" id="login">
 		<div data-role="header">
 			<h1>Login</h1>
 		</div><!-- /header -->
-		<form id="loginform">
+		<form id="loginform" method="post">
 			<div class="textinput" data-role="fieldcontain">
 				<label for="username">Username</label>
-				<input type="text" data-clear-btn="true" name="text-3" data-mini="true"  id="username" value="">
+				<input type="text" data-clear-btn="true" name="username" data-mini="true"  id="username" value="">
 			</div>
 			<div class="textinput" data-role="fieldcontain">
 				<label for="password">Password</label>
