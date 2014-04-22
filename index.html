@@ -23,7 +23,7 @@
 		<div data-role="content">
 			<ul id="mainpagelist" data-role="listview" data-inset="true" data-theme="d" data-divider-theme="e" data-count-theme="b">
 				<li>
-					<a id="tutorial_a" href="#tutorials" data-theme="e" data-transition="flow"> Tutorials 
+					<a id="tutorial_a" href="#tutorials_start" data-theme="e" data-transition="flow"> Tutorials 
 						<span id="tutorialcount" class="ui-li-count">12</span>
 					</a>
 				</li>
@@ -42,7 +42,7 @@
 	</div>
 
 	<!-- Start of second page -->
-	<div data-role="page" id="tutorials">
+	<div data-role="page" id="tutorials_start">
 
 		<div data-role="header">
 			<h1>Tutorials</h1>
@@ -53,9 +53,19 @@
 				
 			</ul>
 			<a href="#index" data-role="button" data-theme="d" data-inline="true" data-mini="true" data-icon="back" data-transition="flow">Back</a>
-		</div><!-- /content -->
 
+
+
+			<a class="tutorials_nextpage" href="#" data-role="button" data-theme="d" data-inline="true" data-mini="true" data-icon="forward" data-transition="flow">Next</a>
+			<input type="hidden" name="tutorial_page" id="tutorial_page" value="1" placeholder="">
+		</div><!-- /content -->
+		
+
+	
 	</div><!-- /page -->
+
+
+
 	<div data-role="page" id="exams">
 
 		<div data-role="header">
